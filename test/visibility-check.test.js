@@ -1,4 +1,4 @@
-var visible = require('../visibility-check')
+var visible = require('..')
 describe('visibility-check', function () {
 
   it('should return false is entity.visible is false', function () {
