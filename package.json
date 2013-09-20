@@ -11,14 +11,12 @@
     "url": "git@github.com:clocklimited/cf-visibility-check"
   },
   "scripts": {
+    "pretest": "./node_modules/.bin/jshint .",
     "test": "./node_modules/.bin/mocha -r should -R spec test/"
   },
   "author": "Adam Duncan <adam.duncan@clock.co.uk>",
   "engines": {
     "node": ">=0.8"
-  },
-  "scripts": {
-    "pretest": "./node_modules/.bin/jshint ."
   },
   "devDependencies": {
     "should": "*",
