@@ -5,20 +5,27 @@
  */
 module.exports = function (entity, date) {
   if (date === undefined) {
-    date = Date.now()
+    date = new Date()
   }
 
   if (entity.visible === false) {
     return false
   }
 
-  if ((entity.liveDate) && (entity.liveDate > date)) {
+  if ((entity.liveDate) && (convertToDate(entity.liveDate) > date)) {
     return false
   }
 
-  if ((entity.expiryDate) && (entity.expiryDate < date)) {
+  if ((entity.expiryDate) && (convertToDate(entity.expiryDate) < date)) {
     return false
   }
 
   return true
+}
+
+function convertToDate(date) {
+  if (typeof date === 'string') {
+    date = new Date(date)
+  }
+  return date
 }
