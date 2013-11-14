@@ -12,11 +12,11 @@ module.exports = function (entity, date) {
     return false
   }
 
-  if ((entity.liveDate) && (convertToDate(entity.liveDate) > date)) {
+  if ((entity.liveDate) && (convertToDate(entity.liveDate) > convertToDate(date))) {
     return false
   }
 
-  if ((entity.expiryDate) && (convertToDate(entity.expiryDate) < date)) {
+  if ((entity.expiryDate) && (convertToDate(entity.expiryDate) < convertToDate(date))) {
     return false
   }
 
