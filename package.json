@@ -11,8 +11,11 @@
     "url": "git@github.com:clocklimited/cf-visibility-check"
   },
   "scripts": {
-    "pretest": "./node_modules/.bin/jshint .",
-    "test": "./node_modules/.bin/mocha -r should -R spec test/"
+    "lint": "./node_modules/.bin/jshint .",
+    "pretest": "npm run-script lint",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --recursive -R spec -r should",
+    "posttest": "./node_modules/.bin/istanbul check-coverage && rm -rf coverage",
+    "prepublish": "npm test && npm prune"
   },
   "author": "Adam Duncan <adam.duncan@clock.co.uk>",
   "engines": {
@@ -21,6 +24,7 @@
   "devDependencies": {
     "should": "*",
     "mocha": "*",
-    "jshint": "*"
+    "jshint": "~2.3.0",
+    "istanbul": "~0.1.45"
   }
 }
