@@ -1,5 +1,7 @@
 # cf-visibility-check
 
+![build status](https://goo.gl/1l8CNJ)
+
 Check whether an entity is considered visible.
 
 ## Installation
