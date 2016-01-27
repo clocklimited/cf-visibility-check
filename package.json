@@ -4,7 +4,7 @@
   "description": "Check whether an entity is considered visible.",
   "main": "visibility-check.js",
   "publishConfig": {
-    "registry": "http://npm.clockte.ch"
+    "registry": "https://registry.npmjs.org"
   },
   "repository": {
     "type": "git",
