@@ -1,5 +1,7 @@
 # cf-visibility-check
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/clocklimited/cf-visibility-check.svg)](https://greenkeeper.io/)
+
 ![build status](https://goo.gl/1l8CNJ)
 
 Check whether an entity is considered visible.
